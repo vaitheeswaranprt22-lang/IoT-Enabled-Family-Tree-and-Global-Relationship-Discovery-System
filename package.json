@@ -1,0 +1,23 @@
+{
+  "name": "global-family-tree",
+  "version": "1.0.0",
+  "description": "Global Family Tree & Ancestry Mapping System with biometric (ESP32) authentication, graph relationship discovery, and human-verified connections.",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=22.5.0" },
+  "scripts": {
+    "start": "node --no-warnings=ExperimentalWarning backend/server.js",
+    "dev": "node --no-warnings=ExperimentalWarning --watch backend/server.js",
+    "db:migrate": "node --no-warnings=ExperimentalWarning backend/db/migrate.js",
+    "db:seed": "node --no-warnings=ExperimentalWarning scripts/seed-synthetic-data/seed.js",
+    "db:reset": "node --no-warnings=ExperimentalWarning scripts/seed-synthetic-data/seed.js --reset",
+    "db:stats": "node --no-warnings=ExperimentalWarning scripts/seed-synthetic-data/seed.js --stats",
+    "device:register": "node --no-warnings=ExperimentalWarning scripts/register-device.js",
+    "test": "node --no-warnings=ExperimentalWarning --test",
+    "test:watch": "node --no-warnings=ExperimentalWarning --test --watch"
+  },
+  "keywords": ["family-tree", "genealogy", "esp32", "biometric", "graph", "ancestry"],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Build your family tree, discover how you are related to other people through verified common ancestors, and sign in with a fingerprint.">
+  <meta name="color-scheme" content="light dark">
+  <title>Global Family Tree &amp; Ancestry Mapping System</title>
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127795;</text></svg>">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Top bar ------------------------------------------------------------ -->
+  <header class="topbar" id="topbar" hidden>
+    <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+
+    <a class="brand" href="#/dashboard">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.6"/><circle cx="5" cy="18" r="2.6"/><circle cx="19" cy="18" r="2.6"/><path d="M12 7.6v3.9M12 11.5H5.6v3.9M12 11.5h6.4v3.9"/></svg>
+      </span>
+      <span class="brand-text">
+        <strong>Global Family Tree</strong>
+        <small>Ancestry Mapping System</small>
+      </span>
+    </a>
+
+    <div class="topbar-spacer"></div>
+
+    <div class="auth-chip" id="authChip" title="How you signed in"></div>
+
+    <a class="icon-btn notif-btn" href="#/notifications" aria-label="Notifications">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+      <span class="badge" id="notifBadge" hidden>0</span>
+    </a>
+
+    <div class="user-menu" id="userMenu"></div>
+  </header>
+
+  <div class="layout" id="layout">
+    <!-- Sidebar --------------------------------------------------------- -->
+    <nav class="sidebar" id="sidebar" aria-label="Main navigation" hidden></nav>
+    <div class="sidebar-scrim" id="sidebarScrim" hidden></div>
+
+    <!-- Main ------------------------------------------------------------ -->
+    <main id="main" class="main" tabindex="-1">
+      <div id="view" class="view">
+        <div class="boot">
+          <div class="spinner" aria-hidden="true"></div>
+          <p>Loading&#8230;</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Toasts, modal ------------------------------------------------------ -->
+  <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header class="modal-head">
+        <h2 id="modalTitle"></h2>
+        <button class="icon-btn" id="modalClose" aria-label="Close">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </header>
+      <div class="modal-body" id="modalBody"></div>
+      <footer class="modal-foot" id="modalFoot"></footer>
+    </div>
+  </div>
+
+  <script type="module" src="/js/app.js"></script>
+  <noscript>
+    <div class="noscript">
+      <h1>JavaScript is required</h1>
+      <p>This application renders the interactive family tree in the browser and needs JavaScript enabled.</p>
+    </div>
+  </noscript>
+</body>
+</html>

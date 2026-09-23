@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "family-tree",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--no-warnings=ExperimentalWarning", "backend/server.js"],
+      "port": 4000
+    }
+  ]
+}
